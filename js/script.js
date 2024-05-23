@@ -90,7 +90,7 @@ async function displayAlbums() {
             let folder = e.href.split("/").slice(-1)[0]
             // Get the metadata of the folder'
             
-            let a = await fetch(`../songs/${folder}/info.json`)
+            let a = await fetch(`/songs/${folder}/info.json`)
 
             let response = await a.json(); 
             cardContainer.innerHTML = cardContainer.innerHTML + ` <div data-folder="${folder}" class="card">
